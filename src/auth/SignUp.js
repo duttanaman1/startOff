@@ -1,13 +1,165 @@
-import React from "react";
-import SignUpNavBar from "./SignUpNavBar";
+import React, { Component } from "react";
+import "../Styles/signIn.css";
+class SignUp extends Component {
+  handleSubmit = (e) => {
+    console.log("form submitted, redirect to");
+  };
+  handleClick = (e) => {
+    e.preventDefault();
+    console.log("form submitted, redirect to");
+  };
+  render() {
+    return (
+      <div className="container mb-3">
+        <div className="container signIn">
+          <div className="row mb-5 mt-2">
+            <div className="col-lg-1 col-md-1 col-sm-2"></div>
+            <div className="col-lg-10 col-md-10 col-sm-8 px-5 pt-2 login-box">
+              <div className="row">
+                <div className="col login-title">
+                  <i className="fa fa-user-circle fa-2x"></i> <br />
+                  SIGNUP
+                </div>
+              </div>
 
-const SignUp = () => {
-  return (
-    <div className="container my-3">
-      <SignUpNavBar />
-      <p>Consumer Sign Up form</p>
-    </div>
-  );
-};
+              <div className="col-lg-12 login-form">
+                <div className="col-lg-12 login-form">
+                  {/* form starting here */}
+                  <form className="row m-2 px-5" onSubmit={this.handleSubmit}>
+                    <div className="col-md-6 form-group">
+                      <label className="form-control-label">
+                        <i className="fa fa-user fa-2x"></i>
+                        <span className="h6">USERNAME</span>
+                      </label>
+                      <input type="text" className="username form-control " />
+                    </div>
+                    <div className="col-md-6 form-group">
+                      <label className="form-control-label">
+                        <i className="fa fa-user fa-2x"></i>
+                        <span className="h6">EMAIL</span>
+                      </label>
+                      <input type="email" className="username form-control " />
+                    </div>
+                    <div className=" col-md-6 form-group">
+                      <label className="form-control-label">
+                        <i className="fa fa-lock fa-2x"></i>
+                        <span className="h6"> PASSWORD</span>
+                      </label>
+                      <input
+                        type="password"
+                        className="password form-control "
+                        i
+                      />
+                    </div>
+                    <div className=" col-md-6 form-group">
+                      <label className="form-control-label">
+                        <i className="fa fa-lock fa-2x"></i>
+                        <span className="h6"> Re-PASSWORD</span>
+                      </label>
+                      <input
+                        type="password"
+                        className="password form-control "
+                        i
+                      />
+                    </div>
+                    <div className="col-md-6 form-group">
+                      <label className="form-control-label">
+                        <i className="fa fa-user fa-2x"></i>
+                        <span className="h6">PHONE</span>
+                      </label>
+                      <input type="tel" className="username form-control " />
+                    </div>
+                    <div className="col-md-6 form-group">
+                      <label className="form-control-label">
+                        <i className="fa fa-user fa-2x"></i>
+                        <span className="h6">Date of Birth</span>
+                      </label>
+                      <input type="text" className="username form-control " />
+                    </div>
+                    <div className="col-md-6 form-group">
+                      <label className="form-control-label">
+                        <i className="fa fa-user fa-2x"></i>
+                        <span className="h6">CITY</span>
+                      </label>
+                      <input type="text" className="username form-control " />
+                    </div>
+                    <div className="col-md-6 form-group">
+                      <label className="form-control-label">
+                        <i className="fa fa-user fa-2x"></i>
+                        <span className="h6">COUNTRY</span>
+                      </label>
+                      <input type="text" className="username form-control " />
+                    </div>
+                    <div className="row form-group">
+                      <div className="col-sm-4">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          id="inlineRadio1"
+                          value="option1"
+                          defaultChecked
+                        />
+                        <label
+                          className="form-control-label"
+                          for="inlineRadio1"
+                        >
+                          <span className="h6">&nbsp; Consumer</span>
+                        </label>
+                      </div>
+                      <div className="col-sm-4">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          id="inlineRadio2"
+                          value="option2"
+                        />
+                        <label
+                          className="form-control-label"
+                          for="inlineRadio2"
+                        >
+                          <span className="h6">&nbsp; Client</span>
+                        </label>
+                      </div>
+                      <div className="col-sm-4">
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          id="inlineRadio3"
+                          value="option3"
+                        />
+                        <label
+                          className="form-control-label"
+                          for="inlineRadio3"
+                        >
+                          <span className="h6">&nbsp; Admin</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div className="form-group">
+                      <center>
+                        <button
+                          type="submit"
+                          className="btn btn-success align-self-center form-control"
+                          onClick={this.handleClick}
+                        >
+                          SignUp
+                        </button>
+                      </center>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div className="col-lg-3 col-md-2"></div>
+            </div>
+            <div className="col-lg-1 col-md-1 col-sm-2"></div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
 
 export default SignUp;

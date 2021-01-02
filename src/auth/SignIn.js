@@ -1,16 +1,17 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
+
 import "../Styles/signIn.css";
 const SignIn = (props) => {
   return (
     <div className="container-fluid signIn">
-      <nav className="navbar ">
-        <div onClick={props.history.goBack} class="back">
-          <i class="fas fa-arrow-circle-left fa-3x"></i>
-        </div>
-      </nav>
       <div className="row my-5 ">
         <div className="col-lg-7 col-md-2 col-sm-2 text-light">
+          <nav className="navbar ">
+            <div onClick={props.history.goBack} class="back">
+              <i class="fas fa-arrow-circle-left fa-3x"></i>
+            </div>
+          </nav>
           edit background image from styles/signin.css in .signIn class, opacity
           of login box is 0.5, edit the background to div.row
         </div>
@@ -40,14 +41,21 @@ const SignIn = (props) => {
                   <input type="password" className="password form-control " i />
                 </div>
 
-                <div className="form-group">
+                <div className="form-group my-5">
                   <center>
                     <button
                       type="submit"
-                      className="btn btn-outline-primary align-self-center"
+                      className="btn form-control btn-primary align-self-center"
                     >
                       LOGIN
                     </button>
+                  </center>
+                </div>
+                <div className="form-group mb-5">
+                  <center>
+                    <Link to="/forgotpass" className="nav-link">
+                      Forgot password?
+                    </Link>
                   </center>
                 </div>
               </form>

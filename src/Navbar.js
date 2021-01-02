@@ -17,7 +17,12 @@ const Navbar = (props) => {
 
   console.log(useLocation().pathname);
   var loc = useLocation().pathname;
-  if (loc == "/SignUp" || loc == "/SignIn") {
+  if (
+    loc === "/SignUp" ||
+    loc === "/SignIn" ||
+    loc === "/forgotpass" ||
+    loc === "/termCondition"
+  ) {
     return null;
   } else {
     return (

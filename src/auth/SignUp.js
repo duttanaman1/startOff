@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import "../Styles/signIn.css";
 class SignUp extends Component {
   handleSubmit = (e) => {
@@ -9,6 +9,7 @@ class SignUp extends Component {
     e.preventDefault();
     console.log("form submitted, redirect to");
   };
+
   render() {
     return (
       <div className="signUp">
@@ -144,6 +145,21 @@ class SignUp extends Component {
                           <span className="h6">&nbsp; Admin</span>
                         </label>
                       </div>
+                    </div>
+                    <div className="form-group">
+                      <input
+                        type="checkbox"
+                        className="form-check-input"
+                        id="exampleCheck1"
+                        checked
+                      />
+                      <label
+                        className="form-control-label"
+                        htmlfor="exampleCheck1"
+                      >
+                        &nbsp; &nbsp;Agree to
+                        <Link to="/termCondition"> terms and Condition</Link>
+                      </label>
                     </div>
                     <div className="form-group">
                       <center>

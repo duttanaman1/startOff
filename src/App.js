@@ -13,6 +13,9 @@ import SignUp from "./auth/SignUp";
 import SignUpAdmin from "./auth/SignUpAdmin";
 import SignUpClient from "./auth/SignUpClient";
 import SignOut from "./auth/SignOut";
+import forgotpass from "./auth/forgotpass";
+import termCondition from "./auth/termCondition";
+
 import cart from "./Consumer/cart";
 import ProfileConsum from "./Consumer/ProfileConsum";
 import ProfileClient from "./Client/ProfileClient";
@@ -33,12 +36,14 @@ class App extends Component {
               <Route path="/" exact component={Home} />
               <Route path="/Home/Client" exact component={HomeClient} />
               <Route path="/Home/Admin" exact component={HomeAdmin} />
-
+              {/* logins, signs, signup */}
               <Route path="/SignIn" component={SignIn} />
               <Route path="/SignUp" component={SignUp} exact />
               <Route path="/SignUp/Admin" component={SignUpAdmin} exact />
               <Route path="/SignUp/Client" component={SignUpClient} exact />
               <Route path="/SignOut" component={SignOut} />
+              <Route path="/forgotpass" component={forgotpass} />
+              <Route path="/termCondition" component={termCondition} />
 
               <Route path="/cart" component={cart} />
               {/* Profiles */}

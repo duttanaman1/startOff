@@ -1,12 +1,18 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import "../Styles/signIn.css";
-const SignIn = () => {
+const SignIn = (props) => {
   return (
     <div className="container-fluid signIn">
+      <nav className="navbar ">
+        <div onClick={props.history.goBack} class="back">
+          <i class="fas fa-arrow-circle-left fa-3x"></i>
+        </div>
+      </nav>
       <div className="row my-5 ">
-        <div className="col-lg-7 col-md-2 col-sm-2">
-          edit background image from styles/signin.css, opacity of login box is
-          0.5, edit the background to div.row
+        <div className="col-lg-7 col-md-2 col-sm-2 text-light">
+          edit background image from styles/signin.css in .signIn class, opacity
+          of login box is 0.5, edit the background to div.row
         </div>
         <div className="col-lg-4 col-md-8 col-sm-8 px-5  login-box">
           <div className="col-lg-12 login-key">
@@ -55,4 +61,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default withRouter(SignIn);

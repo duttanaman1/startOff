@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import "../Styles/signIn.css";
 class SignUp extends Component {
   handleSubmit = (e) => {
@@ -10,11 +11,17 @@ class SignUp extends Component {
   };
   render() {
     return (
-      <div className="container mb-3">
-        <div className="container signIn">
+      <div className="signUp">
+        <div className="container-fluid">
           <div className="row mb-5 mt-2">
-            <div className="col-lg-1 col-md-1 col-sm-2"></div>
-            <div className="col-lg-10 col-md-10 col-sm-8 px-5 pt-2 login-box">
+            <div className="col-lg-2 col-md-1 col-sm-2">
+              <nav className="navbar ">
+                <div onClick={this.props.history.goBack} class="back">
+                  <i class="fas fa-arrow-circle-left fa-3x"></i>
+                </div>
+              </nav>
+            </div>
+            <div className="col-lg-8 col-md-10 col-sm-8 px-5 pt-2 login-box">
               <div className="row">
                 <div className="col login-title">
                   <i className="fa fa-user-circle fa-2x"></i> <br />
@@ -102,7 +109,7 @@ class SignUp extends Component {
                         />
                         <label
                           className="form-control-label"
-                          for="inlineRadio1"
+                          htmlFor="inlineRadio1"
                         >
                           <span className="h6">&nbsp; Consumer</span>
                         </label>
@@ -117,7 +124,7 @@ class SignUp extends Component {
                         />
                         <label
                           className="form-control-label"
-                          for="inlineRadio2"
+                          htmlFor="inlineRadio2"
                         >
                           <span className="h6">&nbsp; Client</span>
                         </label>
@@ -132,7 +139,7 @@ class SignUp extends Component {
                         />
                         <label
                           className="form-control-label"
-                          for="inlineRadio3"
+                          htmlFor="inlineRadio3"
                         >
                           <span className="h6">&nbsp; Admin</span>
                         </label>
@@ -162,4 +169,4 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp;
+export default withRouter(SignUp);

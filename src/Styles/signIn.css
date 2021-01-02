@@ -17,7 +17,11 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+.back {
+  background: -webkit-linear-gradient(#27ef9f, #0db8de);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .login-title {
   text-align: center;
   font-size: 30px;
@@ -103,4 +107,13 @@ label {
 }
 .h6 {
   font-size: 1.25em;
+}
+.signUp {
+  background-color: rgb(44, 43, 43);
+  padding: 10px;
+}
+.signIn {
+  background-color: rgb(44, 43, 43);
+  padding: 10px;
+  min-height: 620px;
 }

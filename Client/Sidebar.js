@@ -21,7 +21,7 @@ class Sidebar extends Component {
       return (
         <div className="sidenavopen">
           <a onClick={this.sidenavClose}>
-            <i class="fas fa-times"></i>
+            <i className="fas fa-times"></i>
           </a>
           <NavLink to="/Home/Client">About</NavLink>
           <NavLink to="/Home/Client">Services</NavLink>
@@ -33,7 +33,7 @@ class Sidebar extends Component {
       return (
         <div className="sidenavclose">
           <div onClick={this.sidenavOpen}>
-            <i class="fas fa-bars"></i>
+            <i className="fas fa-bars"></i>
           </div>
           <NavLink to="/Home/Client">A</NavLink>
           <NavLink to="/Home/Client">S</NavLink>

@@ -51,12 +51,12 @@ const NavSignUp = (props) => {
               <DropdownItem header>{usrname()}</DropdownItem>
               <DropdownItem>
                 <NavLink to={"/Profile/" + usr()} className="nav-link">
-                  <i class="fas fa-id-card"></i> Profile
+                  <i className="fas fa-id-card"></i> Profile
                 </NavLink>
               </DropdownItem>
               <DropdownItem>
                 <NavLink to={"/Setting/" + usr()} className="nav-link">
-                  <i class="fas fa-user-cog"></i> Setting
+                  <i className="fas fa-user-cog"></i> Setting
                 </NavLink>
               </DropdownItem>
               <DropdownItem divider />

@@ -1,11 +1,17 @@
 import React, { Component } from "react";
-import FeaturedItems from "./FeaturedItems";
+import Navbar from "./Components/Navbar";
+import FeaturedProductCatalog from "./FeaturedProductCatalog";
+import HeaderProductCatalog from "./HeaderProductCatalog";
+import DiscountCoupons from "./DiscountCoupons";
 
 class HomeConsumer extends Component {
   render() {
     return (
       <div className="HomeConsumer">
-        <FeaturedItems />
+        <Navbar />
+        <HeaderProductCatalog />
+        <FeaturedProductCatalog />
+        <DiscountCoupons />
       </div>
     );
   }

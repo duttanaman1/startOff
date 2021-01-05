@@ -3,7 +3,7 @@ import "../Styles/HomeConsumer.css";
 
 const FeaturedItems = () => {
   return (
-    <div class="horizontal-scroll-wrapper squares">
+    <div className="horizontal-scroll-wrapper squares">
       <div>https://css-tricks.com/pure-css-horizontal-scrolling/</div>
       <div>item 2</div>
       <div>item 3</div>

@@ -8,8 +8,8 @@ const SignIn = (props) => {
       <div className="row my-5 ">
         <div className="col-lg-7 col-md-2 col-sm-2 text-light">
           <nav className="navbar ">
-            <div onClick={props.history.goBack} class="back">
-              <i class="fas fa-arrow-circle-left fa-3x"></i>
+            <div onClick={props.history.goBack} className="back">
+              <i className="fas fa-arrow-circle-left fa-3x"></i>
             </div>
           </nav>
           edit background image from styles/signin.css in .signIn class, opacity
@@ -27,7 +27,7 @@ const SignIn = (props) => {
                 <div className="form-group">
                   <label className="form-control-label">
                     {" "}
-                    <i class="fa fa-user fa-2x"></i>{" "}
+                    <i className="fa fa-user fa-2x"></i>{" "}
                     <span className="h6">USERNAME</span>
                   </label>
 
@@ -35,7 +35,7 @@ const SignIn = (props) => {
                 </div>
                 <div className="form-group">
                   <label className="form-control-label">
-                    <i class="fa fa-lock fa-2x"></i>
+                    <i className="fa fa-lock fa-2x"></i>
                     <span className="h6"> PASSWORD</span>
                   </label>
                   <input type="password" className="password form-control " i />

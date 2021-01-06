@@ -17,8 +17,8 @@ class SignUp extends Component {
           <div className="row mb-5 mt-2">
             <div className="col-lg-2 col-md-1 col-sm-2">
               <nav className="navbar ">
-                <div onClick={this.props.history.goBack} class="back">
-                  <i class="fas fa-arrow-circle-left fa-3x"></i>
+                <div onClick={this.props.history.goBack} className="back">
+                  <i className="fas fa-arrow-circle-left fa-3x"></i>
                 </div>
               </nav>
             </div>

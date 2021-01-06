@@ -1,0 +1,119 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.login-box {
+  height: auto;
+  background: rgb(26, 34, 38, 0.8);
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.login-key {
+  height: 50px;
+  font-size: 30px;
+  line-height: 50px;
+  background: -webkit-linear-gradient(#27ef9f, #0db8de);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.back {
+  background: -webkit-linear-gradient(#27ef9f, #0db8de);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.login-title {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: #ecf0f5;
+}
+
+.login-form {
+  margin-top: 25px;
+  text-align: left;
+}
+
+.username {
+  background: rgb(26, 34, 38, 0.3);
+  border: none;
+  border-bottom: 2px solid #0db8de;
+  border-top: 0px;
+  font-weight: bold;
+  outline: 0;
+  padding-left: 10px;
+  color: #ecf0f5;
+  border-radius: 10px 10px 5px 5px;
+}
+.form-control-label > span {
+  color: rgba(255, 255, 255, 0.8);
+}
+.password {
+  background: rgb(26, 34, 38, 0.3);
+  border: none;
+  border-bottom: 2px solid #0db8de;
+  border-top: 0px;
+  font-weight: bold;
+  outline: 0;
+  padding-left: 10px;
+  color: #ecf0f5;
+  border-radius: 10px 10px 5px 5px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  outline: 0px;
+}
+
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-bottom: 2px solid #0db8de;
+  outline: 0;
+  background: rgba(2, 28, 41, 0.8);
+  color: #ecf0f5;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0;
+}
+
+label {
+  margin-bottom: 0px;
+}
+
+.form-control-label {
+  font-size: 10px;
+  color: #6c6c6c;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.btn-outline-primary {
+  border-color: #0db8de;
+  color: #0db8de;
+  border-radius: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.btn-outline-primary:hover {
+  background-color: #0db8de;
+  right: 0px;
+}
+.h6 {
+  font-size: 1.25em;
+}
+.signUp {
+  background-color: rgb(44, 43, 43);
+  padding: 10px;
+}
+.signIn {
+  background-color: rgb(44, 43, 43);
+  padding: 10px;
+  min-height: 620px;
+}

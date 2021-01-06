@@ -58,16 +58,6 @@ const Navbar = (props) => {
                 </NavLink>
               </li>
             </ul>
-            <form className="d-flex justify-content-center">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
             {auth()}
             {/* To be used to check if user is loged in or not */}
           </div>

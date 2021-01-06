@@ -1,0 +1,54 @@
+.sidenavopen {
+  height: 100%;
+  width: 15%;
+  position: fixed;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+  margin-top: 5px;
+}
+.sidenavopen .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.sidenavopen a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.sidenavopen a:hover {
+  background-color: rgb(31, 31, 31);
+  cursor: pointer;
+}
+.sidenavclose {
+  height: 100%;
+  width: 5%;
+  position: fixed;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+  margin-top: 5px;
+}
+.sidenavclose a {
+  padding: 8px 8px 8px 0px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenavclose a:hover,
+.sidenavclose div:hover {
+  cursor: pointer;
+}

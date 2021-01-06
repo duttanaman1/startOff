@@ -24,6 +24,9 @@ import ProfileAdmin from "./Admin/ProfileAdmin";
 import SettingConsum from "./Consumer/SettingConsum.js";
 import SettingClient from "./Client/SettingClient";
 import SettingAdmin from "./Admin/SettingAdmin";
+
+import HeaderItem from "./Consumer/HeaderItem";
+
 import Navfooter from "./footer";
 
 class App extends Component {
@@ -59,6 +62,8 @@ class App extends Component {
               {/* 
             <Route path="/about" component={} />
             <Route path="/contact" component={} /> */}
+
+              <Route path="/header/item/:caption" component={HeaderItem} />
             </Switch>
             <Navfooter />
           </div>

@@ -7,7 +7,7 @@ import DiscountCoupons from "./DiscountCoupons";
 class HomeConsumer extends Component {
   render() {
     return (
-      <div className="HomeConsumer">
+      <div className="HomeConsumer mb-5">
         <Navbar />
         <HeaderProductCatalog />
         <FeaturedProductCatalog />

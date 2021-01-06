@@ -4,7 +4,8 @@ import "./App.css";
 import Navbar from "./Navbar";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import Home from "./Consumer/Home";
+import Home from "./Home";
+import HomeConsumer from "./Consumer/Home";
 import HomeClient from "./Client/Home";
 import HomeAdmin from "./Admin/Home";
 
@@ -23,6 +24,9 @@ import ProfileAdmin from "./Admin/ProfileAdmin";
 import SettingConsum from "./Consumer/SettingConsum.js";
 import SettingClient from "./Client/SettingClient";
 import SettingAdmin from "./Admin/SettingAdmin";
+
+import HeaderItem from "./Consumer/HeaderItem";
+
 import Navfooter from "./footer";
 
 class App extends Component {
@@ -34,6 +38,7 @@ class App extends Component {
             <Navbar />
             <Switch>
               <Route path="/" exact component={Home} />
+              <Route path="/Home/Consumer" exact component={HomeConsumer} />
               <Route path="/Home/Client" exact component={HomeClient} />
               <Route path="/Home/Admin" exact component={HomeAdmin} />
               {/* logins, signs, signup */}
@@ -57,6 +62,8 @@ class App extends Component {
               {/* 
             <Route path="/about" component={} />
             <Route path="/contact" component={} /> */}
+
+              <Route path="/header/item/:caption" component={HeaderItem} />
             </Switch>
             <Navfooter />
           </div>

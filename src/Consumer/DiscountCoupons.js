@@ -26,11 +26,15 @@ const DiscountCoupons = () => {
     };
     const discountbox = {
       border: "0.15 solid grey",
-      "box-shadow": "2px 2px 7px 1px #1C6EA4",
+      boxShadow: "2px 2px 7px 1px #1C6EA4",
     };
 
     return (
-      <div className="col-md-5 mx-3 col-sm-12" style={discountbox}>
+      <div
+        className="col-md-6 col-sm-12"
+        style={discountbox}
+        key={discount.title}
+      >
         <Jumbotron>
           <img src={discount.img} alt={discount.title} style={mystyle} />
           <h1 className="display-5">{discount.title}</h1>
@@ -40,29 +44,29 @@ const DiscountCoupons = () => {
             {discount.description}{" "}
             <strong>Set image as background image for discount coupons</strong>
           </p>
-          <p className="lead">
+          <div className="lead">
             <form
               onSubmit={() => {
                 console.log("discount clicked");
               }}
             >
-              <input type="text" value={discount.title} hidden />
+              <input type="text" value={discount.title} hidden readOnly />
               <input
                 type="submit"
-                class=" btn btn-primary"
+                className=" btn btn-primary"
                 onClick={(e) => {
                   e.preventDefault();
                 }}
                 value={discount.discountPer + "%"}
               />
             </form>
-          </p>
+          </div>
         </Jumbotron>
       </div>
     );
   });
   return (
-    <div class="container">
+    <div className="container">
       <div className="row">{display}</div>
     </div>
   );

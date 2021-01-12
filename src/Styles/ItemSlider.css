@@ -1,0 +1,20 @@
+.slideItem {
+  min-height: 200px;
+  text-align: center;
+  line-height: 180px;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: arial;
+  border: 1px solid black;
+  margin: 5px;
+}
+#back {
+  position: absolute;
+  top: 45%;
+  left: 0;
+}
+#forward {
+  position: absolute;
+  top: 45%;
+  right: 0;
+}

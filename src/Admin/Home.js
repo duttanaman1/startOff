@@ -7,7 +7,7 @@ class HomeAdmin extends Component {
       <div className="HomeAdmin row">
         <SidebarA />
         <div className="col">
-          <p>Home Client</p>
+          <p>Home Admin</p>
         </div>
       </div>
     );

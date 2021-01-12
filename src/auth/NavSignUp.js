@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import {
   Dropdown,
@@ -14,15 +15,16 @@ const NavSignUp = (props) => {
   const usrname = () => {
     return <span>Username need to edit</span>;
   };
+  var str = useLocation().pathname + "";
+  var st = str.split("/");
   const usr = () => {
     //condition here for user type; client consumer & admin ... financer
-
-    switch (5) {
-      case 1:
+    switch (st[2]) {
+      case "Client":
         return "Client";
-      case 2:
-        return "admin";
-      case 3:
+      case "Admin":
+        return "Admin";
+      case "financer":
         return "financer";
       default:
         return "Consumer";

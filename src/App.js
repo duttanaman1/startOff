@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import "./App.css";
 
 import Navbar from "./Navbar";
@@ -26,7 +27,8 @@ import SettingClient from "./Client/SettingClient";
 import SettingAdmin from "./Admin/SettingAdmin";
 
 import HeaderItem from "./Consumer/HeaderItem";
-
+import RecentConsumer from "./Consumer/RecentConsumer";
+import ContactConsumer from "./Consumer/ContactConsumer";
 import Navfooter from "./footer";
 
 class App extends Component {
@@ -64,6 +66,8 @@ class App extends Component {
             <Route path="/contact" component={} /> */}
 
               <Route path="/header/item/:caption" component={HeaderItem} />
+              <Route path="/Recent/Consumer" component={RecentConsumer} />
+              <Route path="/Contact/Consumer" component={ContactConsumer} />
             </Switch>
             <Navfooter />
           </div>

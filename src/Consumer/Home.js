@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import Navbar from "./Components/Navbar";
 import FeaturedProductCatalog from "./FeaturedProductCatalog";
 import HeaderProductCatalog from "./HeaderProductCatalog";
-import ItemSlider from "./ItemSlider";
+// import ItemSlider from "./ItemSlider";
 import DiscountCoupons from "./DiscountCoupons";
-import FestiveCollection from "./FestiveCollection";
+// import FestiveCollection from "./FestiveCollection";
 
 class HomeConsumer extends Component {
   render() {
@@ -13,9 +13,9 @@ class HomeConsumer extends Component {
         <Navbar />
         <HeaderProductCatalog />
         <FeaturedProductCatalog />
-        <ItemSlider />
+        {/* <ItemSlider /> */}
         <DiscountCoupons />
-        <FestiveCollection />
+        {/* <FestiveCollection /> */}
       </div>
     );
   }

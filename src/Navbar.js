@@ -7,7 +7,7 @@ const Navbar = (props) => {
   const auth = () => {
     //use props to check if user is logged in or not.
     //props user instead of 1
-    switch (1) {
+    switch (2) {
       case 1:
         return <NavSignIn />;
       default:

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+
 const Navbar = (props) => {
   const Search = () => {
     console.log(useLocation().pathname);
@@ -36,6 +37,11 @@ const Navbar = (props) => {
           </Link>
         </li>
         {Search()}
+        <li className="nav-item">
+          <Link className="" to="/cart/Consumer">
+            <i className="fas fa-shopping-cart fa-2x"></i>
+          </Link>
+        </li>
       </ul>
     </div>
   );

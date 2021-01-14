@@ -51,13 +51,13 @@ class ContactConsumer extends Component {
             Image
           </div>
           <div className="col-md-6 col-sm-5 ">
-            <div class="list-group-item list-group-item-action">
-              <div class="d-flex w-100 justify-content-between">
-                <h1 class="mb-1">{item.ClientName}</h1>
+            <div className="list-group-item list-group-item-action">
+              <div className="d-flex w-100 justify-content-between">
+                <h1 className="mb-1">{item.ClientName}</h1>
               </div>
 
-              <div class="my-1">
-                <table class="table table-hover">
+              <div className="my-1">
+                <table className="table table-hover">
                   <tr>
                     <th scope="row">Phone</th>
                     <td>{item.desp.phone}</td>
@@ -80,11 +80,13 @@ class ContactConsumer extends Component {
           >
             {/* {
                 item.itemsBought.forEach((item, index) => {
-                return <li class="list-group-item">{item + "____" + index}</li>;
+                return <li className="list-group-item">{item + "____" + index}</li>;
               })
               } */}
             {item.itemsBought.map((elem) => {
-              return <button class="btn btn-light p-3 m-3">{elem.name}</button>;
+              return (
+                <button className="btn btn-light p-3 m-3">{elem.name}</button>
+              );
             })}
           </div>
         </div>
@@ -93,10 +95,10 @@ class ContactConsumer extends Component {
     return (
       <div className="ContactConsumer mb-5 ">
         <Navbar />
-        <div class="mb-2">
+        <div className="mb-2">
           <h1>Client Details</h1>
         </div>
-        <div class="mx-5 list-group">{displayContactList}</div>
+        <div className="mx-5 list-group">{displayContactList}</div>
         <div>
           Note here: the items bought are displayed here in form of buttons. To
           Do: on click of these buttons, the consumer should be able to view all

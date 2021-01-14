@@ -1,0 +1,220 @@
+.cart img {
+  max-width: 100%;
+  vertical-align: middle;
+  border-radius: 4px;
+}
+.cart a {
+  text-decoration: none;
+  color: #333;
+}
+.cart a:hover {
+  color: #f58551;
+}
+.cart button {
+  background-color: #16cc9b;
+  border: 2px solid #16cc9b;
+  color: #fff;
+  transition: all 0.25s linear;
+  cursor: pointer;
+}
+.cart button::after {
+  position: relative;
+  right: 0;
+  content: " \276f";
+  transition: all 0.15s linear;
+}
+.cart button:hover {
+  background-color: #f58551;
+  border-color: #f58551;
+}
+.cart button:hover::after {
+  right: -5px;
+}
+.cart button:focus {
+  outline: none;
+}
+.cart ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.cart input {
+  transition: all 0.25s linear;
+}
+.cart input[type="number"]::-webkit-inner-spin-button,
+.cart input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+.cart input {
+  outline: none;
+}
+.cart .container {
+  width: 90%;
+  margin: 0 auto;
+  overflow: auto;
+}
+.cart header.container {
+  margin-bottom: 1.5rem;
+}
+.cart header .breadcrumb {
+  color: #7d7d7d;
+}
+.cart header .breadcrumb li {
+  float: left;
+  padding: 0 6px;
+}
+.cart header .breadcrumb li:first-child {
+  padding-left: 2px;
+}
+.cart header .breadcrumb li:not(:last-child)::after {
+  content: " \276f";
+  padding-left: 8px;
+}
+.cart header .count {
+  float: right;
+  color: #333;
+}
+.cart .products {
+  border-top: 1px solid #ddd;
+}
+.cart .products > li {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+}
+.cart .row {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+}
+.cart .col,
+.cart .quantity,
+.cart .remove {
+  float: left;
+}
+.cart .col.left {
+  width: 70%;
+}
+.cart .col.right {
+  width: 30%;
+  position: absolute;
+  right: 0;
+  top: calc(50% - 30px);
+}
+.cart .detail {
+  padding: 0 0.5rem;
+  line-height: 2.2rem;
+}
+.cart .detail .name {
+  font-size: 1.2rem;
+}
+.cart .detail .description {
+  color: #7d7d7d;
+  font-size: 1rem;
+}
+.cart .detail .price {
+  font-size: 1.5rem;
+}
+.cart .quantity,
+.cart .remove {
+  width: 50%;
+  text-align: center;
+}
+.cart .remove svg {
+  width: 60px;
+  height: 60px;
+}
+.cart .quantity > input {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  left: calc(50% - 30px);
+  background: #fff;
+  border: 2px solid #ddd;
+  color: #7f7f7f;
+  text-align: center;
+  font: 600 1.5rem Helvetica, Arial, sans-serif;
+}
+.cart .quantity > input:hover,
+.cart .quantity > input:focus {
+  border-color: #f58551;
+}
+.cart .close {
+  fill: #7d7d7d;
+  transition: color 150ms linear, background-color 150ms linear,
+    fill 150ms linear, 150ms opacity linear;
+  cursor: pointer;
+}
+.cart .close:hover {
+  fill: #f58551;
+}
+.cart .promotion,
+.cart .summary,
+.cart .checkout {
+  float: left;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+.cart .promotion > label {
+  float: left;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.cart .promotion > input {
+  float: left;
+  width: 80%;
+  font-size: 1rem;
+  padding: 0.5rem 0 0.5rem 1.8rem;
+  border: 2px solid #16cc9b;
+  border-radius: 2rem 0 0 2rem;
+}
+.cart .promotion:hover > input {
+  border-color: #f58551;
+}
+.cart .promotion > button {
+  float: left;
+  width: 20%;
+  padding: 0.5rem 0;
+  border-radius: 0 2rem 2rem 0;
+}
+.cart .promotion:hover > button {
+  border-color: #f58551;
+  background-color: #f58551;
+}
+.cart .promotion > button::after {
+  content: "\276f";
+  font-size: 1rem;
+}
+.cart .summary {
+  font-size: 1.2rem;
+  text-align: right;
+}
+.cart .summary ul li {
+  padding: 0.5rem 0;
+}
+.cart .summary ul li span {
+  display: inline-block;
+  width: 30%;
+}
+.cart .summary ul li.total {
+  font-weight: bold;
+}
+.cart .checkout {
+  text-align: right;
+}
+.cart .checkout > button {
+  font-size: 1.2rem;
+  padding: 0.8rem 2.8rem;
+  border-radius: 1.5rem;
+}
+.cart .empty-product {
+  text-align: center;
+}
+.cart .empty-product > button {
+  font-size: 1.3rem;
+  padding: 10px 30px;
+  border-radius: 5px;
+}

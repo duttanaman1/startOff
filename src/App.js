@@ -52,7 +52,7 @@ class App extends Component {
               <Route path="/forgotpass" component={forgotpass} />
               <Route path="/termCondition" component={termCondition} />
 
-              <Route path="/cart" component={cart} />
+              <Route path="/cart/Consumer" component={cart} />
               {/* Profiles */}
               <Route path="/Profile/Consumer" component={ProfileConsum} />
               <Route path="/Profile/Client" component={ProfileClient} />

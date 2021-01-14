@@ -8,14 +8,14 @@
   background-color: #f2f2f2;
 }
 
-.card {
+.home-cart {
   width: 1024px;
   min-height: 400px;
   position: relative;
   margin: 80px 00px;
 }
 
-.title {
+.home-title {
   width: 240px;
   height: 68px;
   border-radius: 8px;
@@ -27,7 +27,7 @@
   transform: translateY(0px);
 }
 
-.content {
+.home-content {
   width: calc(100% - 160px);
   height: 100%;
   background-color: #ffffff;
@@ -37,27 +37,30 @@
   z-index: 1;
 }
 
-.card:nth-child(even) > .content,
-.card:nth-child(odd) > .title {
+.home-cart:nth-child(even) > .home-content,
+.home-cart:nth-child(odd) > .home-home-title {
   right: 0px;
 }
-.card:nth-child(odd) > .content .card:nth-child(even) > .title {
+.home-cart:nth-child(odd)
+  > .home-content
+  .home-cart:nth-child(even)
+  > .home-home-title {
   left: 0px;
 }
 
-.card:nth-child(odd) > .title {
+.home-cart:nth-child(odd) > .home-content {
   background-image: linear-gradient(to right, #3891a6, #26408b);
 }
 
-.card:nth-child(even) > .title {
+.home-cart:nth-child(even) > .home-content {
   background-image: linear-gradient(to right, #26408b, #3891a6);
 }
 
-.card-large {
+.home-cart-large {
   height: 800px;
 }
 
-.card-list {
+.home-cart-list {
   position: relative;
   top: 0px;
   left: 0px;
@@ -73,6 +76,7 @@
   z-index: 1;
   top: 0px;
   left: 0px;
+  background-color: #26408b;
 }
 
 .shadow-list {
@@ -83,10 +87,10 @@
   transform: translateX(-80px);
 }
 
-.shadow-list .card {
+.shadow-list .home-cart {
   box-shadow: 0px 0px 48px 48px rgba(22, 22, 24, 0.08);
 }
 
-.shadow-list .content {
+.shadow-list .home-content {
   background-color: #f2f2f2;
 }

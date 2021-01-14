@@ -31,13 +31,13 @@ const NavSignUp = (props) => {
     }
   };
 
-  const cartoff = () => {
-    if (usr() === "Consumer") {
-      return <i className="fas fa-shopping-cart fa-2x"></i>;
-    }
-  };
+  // const cartoff = () => {
+  //   if (usr() === "Consumer") {
+  //     return <i className="fas fa-shopping-cart fa-2x"></i>;
+  //   }
+  // };
   return (
-    <div className="mx-3">
+    <div className="mr-5">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
           <Dropdown
@@ -45,6 +45,7 @@ const NavSignUp = (props) => {
             toggle={toggle}
             className="nav-link"
             size="sm"
+            direction="left"
           >
             <DropdownToggle caret>
               <i className="fas fa-user fa-2x"></i>
@@ -73,11 +74,11 @@ const NavSignUp = (props) => {
             </DropdownMenu>
           </Dropdown>
         </li>
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <NavLink className="p-3 ml-3 nav-link" to="/cart">
             {cartoff()}
           </NavLink>
-        </li>
+        </li> */}
       </ul>
     </div>
   );

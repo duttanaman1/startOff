@@ -2,12 +2,85 @@ import React, { Component } from "react";
 import { withRouter, Link } from "react-router-dom";
 import "../Styles/signIn.css";
 class SignUp extends Component {
+  state = {
+    username: "",
+    email: "",
+    password: "",
+    repassword: "",
+    phone: "",
+    dob: "",
+    city: "",
+    country: "",
+    role: "consumer",
+    check: false,
+  };
   handleSubmit = (e) => {
-    console.log("form submitted, redirect to");
+    e.preventDefault();
+    console.log(this.state);
+    if (this.state.password === this.state.repassword && this.state.check) {
+      console.log("form submitted, redirect to");
+    } else {
+      console.log("error in form");
+    }
+  };
+  changeHandler = (e) => {
+    switch (e.target.name) {
+      case "username":
+        this.setState({
+          username: e.target.value,
+        });
+        break;
+      case "country":
+        this.setState({
+          country: e.target.value,
+        });
+        break;
+      case "password":
+        this.setState({
+          password: e.target.value,
+        });
+        break;
+      case "repassword":
+        this.setState({
+          repassword: e.target.value,
+        });
+        break;
+      case "phone":
+        this.setState({
+          phone: e.target.value,
+        });
+        break;
+      case "dob":
+        this.setState({
+          dob: e.target.value,
+        });
+        break;
+      case "city":
+        this.setState({
+          city: e.target.value,
+        });
+        break;
+      case "role":
+        this.setState({
+          role: e.target.value,
+        });
+        break;
+      case "email":
+        this.setState({
+          email: e.target.value,
+        });
+        break;
+      case "check":
+        this.setState({
+          check: !this.state.check,
+        });
+        break;
+      default:
+        break;
+    }
   };
   handleClick = (e) => {
     e.preventDefault();
-    console.log("form submitted, redirect to");
   };
 
   render() {
@@ -39,14 +112,24 @@ class SignUp extends Component {
                         <i className="fa fa-user fa-2x"></i>
                         <span className="h6">USERNAME</span>
                       </label>
-                      <input type="text" className="username form-control " />
+                      <input
+                        type="text"
+                        className="username form-control"
+                        name="username"
+                        onChange={this.changeHandler}
+                      />
                     </div>
                     <div className="col-md-6 form-group">
                       <label className="form-control-label">
                         <i className="fa fa-user fa-2x"></i>
                         <span className="h6">EMAIL</span>
                       </label>
-                      <input type="email" className="username form-control " />
+                      <input
+                        type="email"
+                        className="username form-control "
+                        name="email"
+                        onChange={this.changeHandler}
+                      />
                     </div>
                     <div className=" col-md-6 form-group">
                       <label className="form-control-label">
@@ -56,7 +139,8 @@ class SignUp extends Component {
                       <input
                         type="password"
                         className="password form-control "
-                        i
+                        name="password"
+                        onChange={this.changeHandler}
                       />
                     </div>
                     <div className=" col-md-6 form-group">
@@ -67,7 +151,8 @@ class SignUp extends Component {
                       <input
                         type="password"
                         className="password form-control "
-                        i
+                        name="repassword"
+                        onChange={this.changeHandler}
                       />
                     </div>
                     <div className="col-md-6 form-group">
@@ -75,43 +160,61 @@ class SignUp extends Component {
                         <i className="fa fa-user fa-2x"></i>
                         <span className="h6">PHONE</span>
                       </label>
-                      <input type="tel" className="username form-control " />
+                      <input
+                        type="tel"
+                        className="username form-control "
+                        name="phone"
+                        onChange={this.changeHandler}
+                      />
                     </div>
                     <div className="col-md-6 form-group">
                       <label className="form-control-label">
                         <i className="fa fa-user fa-2x"></i>
                         <span className="h6">Date of Birth</span>
                       </label>
-                      <input type="text" className="username form-control " />
+                      <input
+                        type="date"
+                        className="username form-control "
+                        name="dob"
+                        onChange={this.changeHandler}
+                      />
                     </div>
                     <div className="col-md-6 form-group">
                       <label className="form-control-label">
                         <i className="fa fa-user fa-2x"></i>
                         <span className="h6">CITY</span>
                       </label>
-                      <input type="text" className="username form-control " />
+                      <input
+                        type="text"
+                        className="username form-control "
+                        name="city"
+                        onChange={this.changeHandler}
+                      />
                     </div>
                     <div className="col-md-6 form-group">
                       <label className="form-control-label">
                         <i className="fa fa-user fa-2x"></i>
                         <span className="h6">COUNTRY</span>
                       </label>
-                      <input type="text" className="username form-control " />
+                      <input
+                        type="text"
+                        className="username form-control "
+                        name="country"
+                        onChange={this.changeHandler}
+                      />
                     </div>
                     <div className="row form-group">
                       <div className="col-sm-4">
                         <input
                           className="form-check-input"
                           type="radio"
-                          name="inlineRadioOptions"
-                          id="inlineRadio1"
-                          value="option1"
+                          name="role"
+                          id="role1"
+                          value="consumer"
                           defaultChecked
+                          onChange={this.changeHandler}
                         />
-                        <label
-                          className="form-control-label"
-                          htmlFor="inlineRadio1"
-                        >
+                        <label className="form-control-label" htmlFor="role1">
                           <span className="h6">&nbsp; Consumer</span>
                         </label>
                       </div>
@@ -119,14 +222,12 @@ class SignUp extends Component {
                         <input
                           className="form-check-input"
                           type="radio"
-                          name="inlineRadioOptions"
-                          id="inlineRadio2"
-                          value="option2"
+                          name="role"
+                          id="role2"
+                          value="client"
+                          onChange={this.changeHandler}
                         />
-                        <label
-                          className="form-control-label"
-                          htmlFor="inlineRadio2"
-                        >
+                        <label className="form-control-label" htmlFor="role2">
                           <span className="h6">&nbsp; Client</span>
                         </label>
                       </div>
@@ -134,14 +235,12 @@ class SignUp extends Component {
                         <input
                           className="form-check-input"
                           type="radio"
-                          name="inlineRadioOptions"
-                          id="inlineRadio3"
-                          value="option3"
+                          name="role"
+                          id="role3"
+                          value="admin"
+                          onChange={this.changeHandler}
                         />
-                        <label
-                          className="form-control-label"
-                          htmlFor="inlineRadio3"
-                        >
+                        <label className="form-control-label" htmlFor="role3">
                           <span className="h6">&nbsp; Admin</span>
                         </label>
                       </div>
@@ -150,26 +249,22 @@ class SignUp extends Component {
                       <input
                         type="checkbox"
                         className="form-check-input"
-                        id="exampleCheck1"
-                        checked
+                        id="check"
+                        name="check"
+                        onChange={this.changeHandler}
                       />
-                      <label
-                        className="form-control-label"
-                        htmlfor="exampleCheck1"
-                      >
+                      <label className="form-control-label" htmlFor="check">
                         &nbsp; &nbsp;Agree to
                         <Link to="/termCondition"> terms and Condition</Link>
                       </label>
                     </div>
                     <div className="form-group">
                       <center>
-                        <button
+                        <input
                           type="submit"
+                          value="SignUp"
                           className="btn btn-success align-self-center form-control"
-                          onClick={this.handleClick}
-                        >
-                          SignUp
-                        </button>
+                        />
                       </center>
                     </div>
                   </form>

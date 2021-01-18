@@ -109,7 +109,9 @@ function Summary(props) {
       </div>
 
       <div className="checkout">
-        <button type="button">Check Out</button>
+        <button type="button" onClick={console.log("check out")}>
+          Check Out
+        </button>
       </div>
     </section>
   );

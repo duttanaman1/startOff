@@ -1,14 +1,33 @@
 import React, { useState } from "react";
-import { Collapse, Button, CardBody, Card } from "reactstrap";
+import { Collapse, CardBody, Card } from "reactstrap";
 
 const Address = () => {
+  var newstate = {
+    name: "",
+    mob: "",
+    pincode: "",
+    locality: "",
+    address: "",
+    city: "",
+    state: "",
+    landmark: "",
+    mobAlt: "",
+    tag: "",
+  };
+  var addrState = [];
+
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
+  const changeHandler = (event) => {
+    newstate[event.target.name] = event.target.value;
+  };
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(event);
+    addrState = addrState.concat(newstate);
+    console.log(addrState);
   };
+
   return (
     <div className="ProfileConsum-Address">
       <h1>Manage Address</h1>
@@ -37,8 +56,9 @@ const Address = () => {
                 <input
                   type="text"
                   className="form-control"
-                  name="Name"
+                  name="name"
                   placeholder="Name"
+                  onChange={changeHandler}
                 />
               </div>
               <div className="col-md-4 my-3">
@@ -47,6 +67,7 @@ const Address = () => {
                   className="form-control"
                   name="mob"
                   placeholder="10-Digit Mobile Number"
+                  onChange={changeHandler}
                 />
               </div>
               <div className="col-md-4 my-3"></div>
@@ -57,6 +78,7 @@ const Address = () => {
                   className="form-control"
                   name="pincode"
                   placeholder="Pincode"
+                  onChange={changeHandler}
                 />
               </div>
               <div className="col-md-4 my-3">
@@ -65,6 +87,7 @@ const Address = () => {
                   className="form-control"
                   name="locality"
                   placeholder="Locality"
+                  onChange={changeHandler}
                 />
               </div>
               <div className="col-md-4 my-3"></div>
@@ -74,6 +97,7 @@ const Address = () => {
                   name="address"
                   className="form-control"
                   placeholder="Address (Area and Street)"
+                  onChange={changeHandler}
                 ></textarea>
               </div>
               <div className="col-md-4 my-3"></div>
@@ -84,6 +108,7 @@ const Address = () => {
                   className="form-control"
                   name="city"
                   placeholder="City/District/Town"
+                  onChange={changeHandler}
                 />
               </div>
               <div className="col-md-4 my-3">
@@ -92,6 +117,7 @@ const Address = () => {
                   className="form-control"
                   name="state"
                   placeholder="State"
+                  onChange={changeHandler}
                 />
               </div>
               <div className="col-md-4 my-3"></div>
@@ -102,6 +128,7 @@ const Address = () => {
                   className="form-control"
                   name="landmark"
                   placeholder="Landmark (Optional)"
+                  onChange={changeHandler}
                 />
               </div>
               <div className="col-md-4 my-3">
@@ -110,6 +137,7 @@ const Address = () => {
                   className="form-control"
                   name="mobAlt"
                   placeholder="Alternate Mobile (Optional)"
+                  onChange={changeHandler}
                 />
               </div>
               <div className="col-md-4 my-3"></div>
@@ -121,6 +149,7 @@ const Address = () => {
                     type="radio"
                     name="tag"
                     value="Home"
+                    onChange={changeHandler}
                   />
                   <label className="form-check-label" htmlFor="Home">
                     Home
@@ -132,6 +161,7 @@ const Address = () => {
                     type="radio"
                     name="tag"
                     value="Work"
+                    onChange={changeHandler}
                   />
                   <label className="form-check-label" htmlFor="Work">
                     Work
@@ -143,6 +173,7 @@ const Address = () => {
                     type="radio"
                     name="tag"
                     value="other"
+                    onChange={changeHandler}
                   />
                   <label className="form-check-label" htmlFor="other">
                     Other
@@ -172,6 +203,16 @@ const Address = () => {
           </form>
         </Card>
       </Collapse>
+      <div className="container list-group w-75">
+        <div className="list-group-item list-group-item-action ">
+          <div className="d-flex w-100 justify-content-between">
+            <h5 className="mb-1">Name</h5>
+            <small>Delete</small>
+          </div>
+          <p className="mb-1">Address here</p>
+          <small>Tag here</small>
+        </div>
+      </div>
     </div>
   );
 };

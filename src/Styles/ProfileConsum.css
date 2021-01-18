@@ -1,0 +1,12 @@
+.ProfileConsum li {
+  padding: 1.5rem;
+}
+.ProfileConsum .list-group {
+  height: 100%;
+}
+.ProfileConsum li:hover {
+  cursor: pointer;
+  box-shadow: inset 5px -4px 15px 8px rgba(196, 196, 196, 0.3);
+  transition: 0.5s;
+  border-bottom: 0.5px solid grey;
+}

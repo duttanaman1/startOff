@@ -2,14 +2,14 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.login-box {
+.signIn .login-box {
   height: auto;
   background: rgb(26, 34, 38, 0.8);
   text-align: center;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.login-key {
+.signIn .login-key {
   height: 50px;
   font-size: 30px;
   line-height: 50px;
@@ -17,12 +17,12 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.back {
+.signIn .back {
   background: -webkit-linear-gradient(#27ef9f, #0db8de);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.login-title {
+.signIn .login-title {
   text-align: center;
   font-size: 30px;
   letter-spacing: 2px;
@@ -30,12 +30,12 @@ body {
   color: #ecf0f5;
 }
 
-.login-form {
+.signIn .login-form {
   margin-top: 25px;
   text-align: left;
 }
 
-.username {
+.signIn .username {
   background: rgb(26, 34, 38, 0.3);
   border: none;
   border-bottom: 2px solid #0db8de;
@@ -46,10 +46,10 @@ body {
   color: #ecf0f5;
   border-radius: 10px 10px 5px 5px;
 }
-.form-control-label > span {
+.signIn .form-control-label > span {
   color: rgba(255, 255, 255, 0.8);
 }
-.password {
+.signIn .password {
   background: rgb(26, 34, 38, 0.3);
   border: none;
   border-bottom: 2px solid #0db8de;
@@ -61,12 +61,12 @@ body {
   border-radius: 10px 10px 5px 5px;
 }
 
-.form-group {
+.signIn .form-group {
   margin-bottom: 20px;
   outline: 0px;
 }
 
-.form-control:focus {
+.signIn .form-control:focus {
   border-color: inherit;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -76,23 +76,23 @@ body {
   color: #ecf0f5;
 }
 
-input:focus {
+.signIn input:focus {
   outline: none;
   box-shadow: 0 0 0;
 }
 
-label {
+.signIn label {
   margin-bottom: 0px;
 }
 
-.form-control-label {
+.signIn .form-control-label {
   font-size: 10px;
   color: #6c6c6c;
   font-weight: bold;
   letter-spacing: 1px;
 }
 
-.btn-outline-primary {
+.signIn .btn-outline-primary {
   border-color: #0db8de;
   color: #0db8de;
   border-radius: 15px;
@@ -101,11 +101,11 @@ label {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-.btn-outline-primary:hover {
+.signIn .btn-outline-primary:hover {
   background-color: #0db8de;
   right: 0px;
 }
-.h6 {
+.signIn .h6 {
   font-size: 1.25em;
 }
 .signUp {

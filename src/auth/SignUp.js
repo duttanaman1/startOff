@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withRouter, Link } from "react-router-dom";
+import axios from "axios";
 import "../Styles/signIn.css";
 class SignUp extends Component {
   state = {
@@ -19,6 +20,18 @@ class SignUp extends Component {
     console.log(this.state);
     if (this.state.password === this.state.repassword && this.state.check) {
       console.log("form submitted, redirect to");
+
+      fetch(
+        "https://startup-client-java.herokuapp.com/api/register/create-client",
+        {
+          method: "POST",
+          // We convert the React state to JSON and send it as the POST body
+          body: JSON.stringify(this.state),
+        }
+      ).then(function (response) {
+        console.log(response);
+        return response.json();
+      });
     } else {
       console.log("error in form");
     }

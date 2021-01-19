@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Collapse, CardBody, Card } from "reactstrap";
 
 const Address = () => {
-  var newstate = {
+  var addr = {
     name: "",
     mob: "",
     pincode: "",
@@ -14,19 +14,85 @@ const Address = () => {
     mobAlt: "",
     tag: "",
   };
-  var addrState = [];
 
   const [isOpen, setIsOpen] = useState(false);
+  const [address, setAddress] = useState([]);
   const toggle = () => setIsOpen(!isOpen);
 
   const changeHandler = (event) => {
-    newstate[event.target.name] = event.target.value;
+    switch (event.target.name) {
+      case "name":
+        addr.name = event.target.value;
+        break;
+      case "mob":
+        addr.mob = event.target.value;
+        break;
+      case "pincode":
+        addr.pincode = event.target.value;
+        break;
+      case "locality":
+        addr.locality = event.target.value;
+        break;
+      case "city":
+        addr.city = event.target.value;
+        break;
+      case "state":
+        addr.state = event.target.value;
+        break;
+      case "landmark":
+        addr.landmark = event.target.value;
+        break;
+      case "mobAlt":
+        addr.mobAlt = event.target.value;
+        break;
+      case "tag":
+        addr.tag = event.target.value;
+        break;
+      default:
+        break;
+    }
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    addrState = addrState.concat(newstate);
-    console.log(addrState);
+    setAddress(address.concat(addr));
+    toggle();
   };
+  const handleDelete = (t) => {
+    console.log(t);
+    let filterAddress = address.filter((item) => {
+      return item.tag !== t;
+    });
+    setAddress(filterAddress);
+  };
+  useEffect(() => {
+    console.log(address);
+  });
+  const ListGroup = address.map((item) => {
+    return (
+      <div className="list-group-item list-group-item-action ">
+        <div className="d-flex w-100 justify-content-between">
+          <h5 className="mb-1">{item.name}</h5>
+          <small
+            onClick={() => {
+              handleDelete(item.tag);
+            }}
+          >
+            <i class="fas fa-trash fa-2x"></i>
+          </small>
+        </div>
+        <p className="mb-1">
+          {item.locality +
+            ", " +
+            item.city +
+            ", " +
+            item.state +
+            " - " +
+            item.pincode}
+        </p>
+        <small>{item.tag}</small>
+      </div>
+    );
+  });
 
   return (
     <div className="ProfileConsum-Address">
@@ -203,16 +269,7 @@ const Address = () => {
           </form>
         </Card>
       </Collapse>
-      <div className="container list-group w-75">
-        <div className="list-group-item list-group-item-action ">
-          <div className="d-flex w-100 justify-content-between">
-            <h5 className="mb-1">Name</h5>
-            <small>Delete</small>
-          </div>
-          <p className="mb-1">Address here</p>
-          <small>Tag here</small>
-        </div>
-      </div>
+      <div className="container list-group w-75 my-5">{ListGroup}</div>
     </div>
   );
 };

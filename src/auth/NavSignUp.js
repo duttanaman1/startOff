@@ -53,15 +53,16 @@ const NavSignUp = (props) => {
             <DropdownMenu>
               <DropdownItem header>{usrname()}</DropdownItem>
               <DropdownItem>
+                <NavLink to={"/Home/" + usr()} className="nav-link">
+                  <i className="fas fa-user-cog"></i> Home
+                </NavLink>
+              </DropdownItem>
+              <DropdownItem>
                 <NavLink to={"/Profile/" + usr()} className="nav-link">
                   <i className="fas fa-id-card"></i> Profile
                 </NavLink>
               </DropdownItem>
-              <DropdownItem>
-                <NavLink to={"/Setting/" + usr()} className="nav-link">
-                  <i className="fas fa-user-cog"></i> Setting
-                </NavLink>
-              </DropdownItem>
+
               <DropdownItem divider />
               <DropdownItem>
                 <NavLink

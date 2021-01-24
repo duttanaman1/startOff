@@ -35,6 +35,7 @@ class EditableText extends Component {
           }}
           onBlur={(event) => {
             this.setState({ edit: false });
+            this.props.stateChange(this.state);
           }}
           onKeyUp={(event) => {
             if (event.key === "Escape") {
@@ -42,6 +43,7 @@ class EditableText extends Component {
             }
             if (event.key === "Enter") {
               this.setState({ edit: false });
+              this.props.stateChange(this.state);
             }
           }}
         />
@@ -62,22 +64,29 @@ class Profile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      FirstName: "ReactJS: EditableText",
+      FirstName: "Naman",
       Username: "ReactJS: EditableText",
-      LastName: "ReactJS: EditableText",
-      Email: "ReactJS: EditableText",
-      Mobile: "ReactJS: EditableText",
-      DoB: "ReactJS: EditableText",
-      Password: "ReactJS: EditableText",
-      City: "ReactJS: EditableText",
-      Country: "ReactJS: EditableText",
+      LastName: "Dutta",
+      Email: "duttanaman1@gmail.com",
+      Mobile: "7339210265",
+      DoB: "18/11/1999",
+      Password: "naman",
+      City: "Kathmandu",
+      Country: "City",
     };
-    this.handleClick = this.handleClick.bind(this);
+    // this.handleClick = this.handleClick.bind(this);
   }
-  handleClick(event) {
-    console.log("handleClick", event.target.name);
-    eval(this[event.target.name]).bind(this)(event);
-  }
+  stateChange = (item) => {
+    console.log(item.name + " " + item.value);
+    this.setState({
+      [item.name]: item.value,
+    });
+  };
+
+  // handleClick(event) {
+  //   //console.log("handleClick", event.target.name);
+  //   eval(this[event.target.name]).bind(this)(event);
+  // }
   render() {
     return (
       <div className="ConsumProfile container-fluid">
@@ -91,6 +100,8 @@ class Profile extends Component {
                 <EditableText
                   value={this.state.FirstName}
                   editClassName="form-control"
+                  name="FirstName"
+                  stateChange={this.stateChange}
                 />
               </td>
               <th scope="row">Last Name</th>
@@ -98,6 +109,8 @@ class Profile extends Component {
                 <EditableText
                   value={this.state.LastName}
                   editClassName="form-control"
+                  stateChange={this.stateChange}
+                  name="LastName"
                 />
               </td>
             </tr>
@@ -107,6 +120,8 @@ class Profile extends Component {
                 <EditableText
                   value={this.state.Email}
                   editClassName="form-control"
+                  stateChange={this.stateChange}
+                  name="Email"
                 />
               </td>
               <th scope="row">Password</th>
@@ -114,6 +129,8 @@ class Profile extends Component {
                 <EditableText
                   value={this.state.Password}
                   editClassName="form-control"
+                  stateChange={this.stateChange}
+                  name="Password"
                 />
               </td>
             </tr>
@@ -123,6 +140,8 @@ class Profile extends Component {
                 <EditableText
                   value={this.state.Mobile}
                   editClassName="form-control"
+                  stateChange={this.stateChange}
+                  name="Mobile"
                 />
               </td>
               <th scope="row">Date of Birth</th>
@@ -130,6 +149,8 @@ class Profile extends Component {
                 <EditableText
                   value={this.state.DoB}
                   editClassName="form-control"
+                  stateChange={this.stateChange}
+                  name="DoB"
                 />
               </td>
             </tr>
@@ -139,6 +160,8 @@ class Profile extends Component {
                 <EditableText
                   value={this.state.City}
                   editClassName="form-control"
+                  stateChange={this.stateChange}
+                  name="City"
                 />
               </td>
               <th scope="row">Country</th>
@@ -146,6 +169,8 @@ class Profile extends Component {
                 <EditableText
                   value={this.state.Country}
                   editClassName="form-control"
+                  stateChange={this.stateChange}
+                  name="Country"
                 />
               </td>
             </tr>
